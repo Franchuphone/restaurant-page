@@ -1,3 +1,4 @@
+export { getContent } from './homepage';
 import './style.css'
 
-export { title } from "./homepage.js";
+// export getContent() from "./homepage.js";

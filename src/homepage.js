@@ -21,4 +21,4 @@ descriptionSecond.textContent = "Here, in a typycal japanese house of the 19th c
 imageDiv.append( imageFirst, imageSecond );
 content.append( title, imageDiv, descriptionFirst, descriptionSecond );
 
-export { title };
+export function getContent() { return content }
