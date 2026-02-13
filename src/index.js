@@ -7,6 +7,7 @@ import './style.css'
 function cleanContent() {
     const body = document.querySelector( "body" );
     content.textContent = "";
+    content.className = "content-display";
     content.remove();
     body.append( content );
 }
@@ -18,6 +19,7 @@ document.querySelector( ".nav-home" ).addEventListener( "click", () => {
 
 document.querySelector( ".nav-menu" ).addEventListener( "click", () => {
     cleanContent();
+    content.classList.add( "menu" )
     getMenuContent();
 } );
 
