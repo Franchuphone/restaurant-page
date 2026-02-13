@@ -38,6 +38,8 @@ button {
     background-color: var(--clr-pri);
     border: none;
     border-radius: var(--radius-pri);
+    transition: background-color 1s ease-in-out,
+        color 0.5s ease-in-out;
 }
 
 button:is(:hover, :focus) {
@@ -64,7 +66,7 @@ h1 {
 }
 
 #content > * {
-    padding: var(--size-pri);
+    padding: calc(2*var(--size-pri));
 }
 
 .img-bar {
@@ -88,17 +90,20 @@ h1 {
 
 .menu {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr));
     grid-auto-rows: max-content;
+    gap: var(--size-pri);
 }
 
 .menu > * {
-    margin: var(--size-pri);
+    margin: calc(2 * var(--size-pri)) auto;
     border-radius: var(--size-pri);
     border: 2px solid transparent;
-    transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out,
+        background-color 1s ease-in-out;
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr 3fr;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr 3fr;
     justify-items: center;
     white-space: pre-line;
 }
@@ -118,7 +123,7 @@ h1 {
 }
 
 .menu img {
-    width: 60%;
+    width: clamp(150px, 25vw, 60%);
     aspect-ratio: 3/2;
     object-fit: cover;
 }
