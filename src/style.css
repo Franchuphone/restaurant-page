@@ -89,8 +89,6 @@ p {
 
 .home .img-bar > * {
     flex: 1;
-    /* width: min(250px, 50%);
-    border-radius: var(--radius-pri); */
 }
 
 .home p {
@@ -124,7 +122,6 @@ p {
 }
 
 .menu p {
-    /* padding: var(--size-pri); */
     max-width: 30ch;
     margin: auto;
 }

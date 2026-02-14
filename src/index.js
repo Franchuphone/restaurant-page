@@ -5,7 +5,6 @@ import { getLocationContent } from './location';
 import './style.css'
 
 function cleanContent() {
-    const body = document.querySelector( "body" );
     const footer = document.querySelector( "footer" );
     content.innerHTML = "";
     content.className = "content-display";
