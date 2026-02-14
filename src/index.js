@@ -1,19 +1,21 @@
 import { content, getHomeContent } from './homepage';
 import { getMenuContent } from './menu';
-import { getAboutContent } from './about';
+import { getHistoryContent } from './history';
 import { getLocationContent } from './location';
 import './style.css'
 
 function cleanContent() {
     const body = document.querySelector( "body" );
-    content.textContent = "";
+    const footer = document.querySelector( "footer" );
+    content.innerHTML = "";
     content.className = "content-display";
     content.remove();
-    body.append( content );
+    footer.before( content );
 }
 
 document.querySelector( ".nav-home" ).addEventListener( "click", () => {
     cleanContent();
+    content.classList.add( "home" );
     getHomeContent();
 } );
 
@@ -28,7 +30,7 @@ document.querySelector( ".nav-location" ).addEventListener( "click", () => {
     getLocationContent();
 } );
 
-document.querySelector( ".nav-about" ).addEventListener( "click", () => {
+document.querySelector( ".nav-history" ).addEventListener( "click", () => {
     cleanContent();
-    getAboutContent();
+    getHistoryContent();
 } );
