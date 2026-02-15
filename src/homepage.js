@@ -16,8 +16,8 @@ export function getHomeContent() {
     imageFirst.alt = "An old japanese house besides a river";
     imageSecond.src = images[ "food.jpg" ]
     imageSecond.alt = "Some sushis on a wooden board";
-    descriptionFirst.textContent = "Surrounded by an incredible landscape, you'll be welcome on a sanctuary of savours and smellings.";
-    descriptionSecond.textContent = "Here, in a typycal japanese house of the 19th century, you will experience a food travel like no other one.";
+    descriptionFirst.textContent = "Surrounded by an incredible landscape, you'll be welcome in a sanctuary of savours and smellings";
+    descriptionSecond.textContent = "Here, in a typycal japanese house of the 19th century, you will experience a food travel like no other one";
 
     imageDiv.append( imageFirst, imageSecond );
     content.append( title, imageDiv, descriptionFirst, descriptionSecond );

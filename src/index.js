@@ -4,12 +4,15 @@ import { getHistoryContent } from './history';
 import { getLocationContent } from './location';
 import './style.css'
 
+content.className = "content-display home";
+getHomeContent();
+
 function cleanContent() {
-    const footer = document.querySelector( "footer" );
+    const container = document.querySelector( ".container" );
     content.innerHTML = "";
     content.className = "content-display";
     content.remove();
-    footer.before( content );
+    container.append( content );
 }
 
 document.querySelector( ".nav-home" ).addEventListener( "click", () => {
